@@ -4,5 +4,4 @@ import cx_Oracle
 
 app = Flask(__name__)
 
-st.title('Dữ liệu từ Oracle qua API')
-    
+st.title('Dữ liệu từ Oracle qua API')  
