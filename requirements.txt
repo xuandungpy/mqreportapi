@@ -1,0 +1,5 @@
+Flask
+cx_Oracle
+pandas
+requests
+streamlit
