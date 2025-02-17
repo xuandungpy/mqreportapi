@@ -4,4 +4,4 @@ import requests
 
 
 # Hiển thị dữ liệu bằng Streamlit
-st.title('Dữ liệu từ Oracle qua API')
+st.title('MQ Report API')
