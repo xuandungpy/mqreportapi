@@ -5,8 +5,8 @@ app = Flask(__name__)
 
 @app.route('/get-data', methods=['GET'])
 def get_data():
-    dsn_tns = cx_Oracle.makedsn('mqsoft.ddns.net', '1521', service_name='mqsoft')
-    connection = cx_Oracle.connect(user='system', password='Mqsoft0989777722', dsn=dsn_tns, encoding='UTF-8', nencoding='UTF-8')
+    dsn_tns = cx_Oracle.makedsn('192.168.1.250', '1521', service_name='mqsoft')
+    connection = cx_Oracle.connect(user='system', password='Mqsoft0989777722', dsn=dsn_tns)
     
     cursor = connection.cursor()
     cursor.execute('SELECT id, ma, ten, dang FROM mqsoftbvnhabe_test.d_dmbd')
@@ -24,4 +24,5 @@ def get_data():
     return response
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+# app.run(debug=True)
+    app.run(host="0.0.0.0", port=5000, debug=True)
